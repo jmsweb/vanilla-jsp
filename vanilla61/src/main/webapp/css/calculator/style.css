@@ -1,0 +1,45 @@
+div#calculator-container {
+  padding: 1vw;
+}
+
+table#calculator-table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+table#calculator-table td {
+  padding: 1em;
+  border: 1px solid black;
+  background-color: #EEEEEE;
+  font-size: 1em;
+}
+
+table#calculator-table td.screen {
+  border: 1px solid #000000;
+  text-align: right;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+table#calculator-table td.function {
+  background-color: #CCCCCC;
+}
+
+table#calculator-table td.operand {
+  background-color: #FF9500;
+  color: #FFFFFF;
+}
+
+table#calculator-table td:hover {
+  cursor: pointer;
+}
+
+table#calculator-table td.screen:hover {
+  cursor: auto;
+}
+
+table#calculator-table td.spacer {
+  padding: 0;
+  height: 1vw;
+  border: 0px solid #AAAAAA;
+}

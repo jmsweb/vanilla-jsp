@@ -1,10 +1,9 @@
 <%@tag description="HTML Layout Tag" pageEncoding="UTF-8"%>
 <%@taglib prefix="cd" uri="/WEB-INF/expression/CurrentDate.tld" %>
-<%@attribute name="title" required="true" %>
 <!DOCTYPE html>
 <html>
   <head>
-    <title>JSP Template :: ${title}</title>
+    <title>Vanilla JSP :: ${requestScope.title}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Jason Schwebke">
@@ -22,7 +21,7 @@
     <div class="container h-100 d-flex p-3 mx-auto flex-column">
       <nav class="navbar navbar-expand-lg bg-body-tertiary mb-auto rounded">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Vanilla JSP</a>
+          <a class="navbar-brand" href="${pageContext.request.contextPath}/home">Vanilla JSP</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -37,12 +36,31 @@
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="#">Code Rain</a>
+                <a
+                  class="nav-link"
+                  href="${pageContext.request.contextPath}/code-rain"
+                >
+                  Code Rain
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">iOS Calculator</a>
+                <a
+                  class="nav-link"
+                  href="${pageContext.request.contextPath}/ios-calculator"
+                >
+                  iOS Calculator
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="${pageContext.request.contextPath}/conway-gol"
+                >
+                  Conway GOL
+                </a>
               </li>
             </ul>
+            <span class="text-dark">${cd:year("")}</span>
           </div>
         </div>
       </nav>
